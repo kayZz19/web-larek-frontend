@@ -27,7 +27,7 @@ export class BasketData implements IBasket {
 			.filter((item) => item.price !== null) // Отфильтровываем элементы с null ценой
 			.reduce((sum, next) => sum + next.price, 0);
 	}
-	
+
 	clearBasket() {
 		this.orderBasket = [];
 		this.events.emit('basket:changed');
